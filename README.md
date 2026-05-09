@@ -157,5 +157,3 @@ pointing sideways. Do not auto-orient the model in the slicer.
 
 This project is released under the Creative Commons Attribution-ShareAlike 4.0
 International license. See `LICENSE`.
-
-See `NOTICE` for retained third-party attribution context.

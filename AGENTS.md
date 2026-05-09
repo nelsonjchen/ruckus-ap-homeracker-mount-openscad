@@ -16,5 +16,4 @@
 ## Licensing
 
 - This project's original model work is intended to be CC BY-SA 4.0.
-- Preserve the BSD attribution for the reference Cisco AIR-AP-BRACKET-1 Thingiverse model. Do not remove `NOTICE` or source comments that identify the upstream inspiration.
 - The HomeRacker dependency contains MIT-licensed code and CC BY-SA models; keep upstream notices intact when copying or adapting code.
