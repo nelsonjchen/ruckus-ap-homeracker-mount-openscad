@@ -17,7 +17,8 @@ This is a working Ruckus AP HomeRacker mount prototype.
 Generated STL artifacts will be published through GitHub releases:
 [ruckus-ap-homeracker-mount-openscad releases](https://github.com/nelsonjchen/ruckus-ap-homeracker-mount-openscad/releases)
 
-MakerWorld: coming later.
+Published print profile:
+[Ruckus AP HomeRacker Mount on MakerWorld](https://makerworld.com/en/models/2776338-ruckus-ap-homeracker-mount#profileId-3084819)
 
 ## Required Print Orientation
 
