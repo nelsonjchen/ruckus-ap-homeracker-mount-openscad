@@ -33,7 +33,7 @@ ruckus_prong_shaft_height = 2.1; // [1:0.1:8]
 ruckus_prong_cap_diameter = 6.7; // [3:0.1:12]
 ruckus_prong_cap_height = 3.5; // [1:0.1:8]
 ruckus_interface_rotation = 90; // [0,90]
-ruckus_mount_z = -3; // [-20:0.1:30]
+ruckus_mount_z = -4.4; // [-20:0.1:30]
 ruckus_gussets_enabled = true; // [false,true]
 ruckus_gusset_thickness = 8; // [1:0.1:20]
 ruckus_gusset_overhang_angle = 30; // [10:0.1:60]
@@ -121,6 +121,20 @@ module homeracker_sleeve() {
         }
 
         lockpin_holes();
+    }
+}
+
+module homeracker_channel_clearance() {
+    rotate([0, 0, sleeve_rotation])
+    for (segment_side = SLEEVE_ISLAND_SIDES) {
+        segment_y = segment_side * SLEEVE_SEGMENT_OFFSET;
+
+        translate([0, segment_y, SLEEVE_INNER_SIDE / 2])
+            centered_box([
+                SLEEVE_INNER_SIDE + 2 * EPSILON,
+                SLEEVE_SEGMENT_LENGTH + 2 * EPSILON,
+                SLEEVE_INNER_SIDE + 2 * EPSILON
+            ]);
     }
 }
 
@@ -213,9 +227,13 @@ module prototype_mount() {
     union() {
         homeracker_sleeve();
 
-        translate([0, 0, SLEEVE_INNER_SIDE + sleeve_roof_thickness + ruckus_mount_z])
-            rotate([0, 0, ruckus_interface_rotation])
-                ruckus_reference_approximation();
+        difference() {
+            translate([0, 0, SLEEVE_INNER_SIDE + sleeve_roof_thickness + ruckus_mount_z])
+                rotate([0, 0, ruckus_interface_rotation])
+                    ruckus_reference_approximation();
+
+            homeracker_channel_clearance();
+        }
     }
 }
 

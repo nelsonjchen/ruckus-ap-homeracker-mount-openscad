@@ -4,7 +4,7 @@ PNG_FILE := $(RENDER_DIR)/ruckus_ap_homeracker_sleeve.png
 STL_ROTATION90_FILE := $(RENDER_DIR)/ruckus_ap_homeracker_sleeve_rotation90.stl
 STL_ROTATION0_FILE := $(RENDER_DIR)/ruckus_ap_homeracker_sleeve_rotation0.stl
 STL_PROTOTYPE_FILE := $(RENDER_DIR)/ruckus_ap_homeracker_mount_prototype.stl
-STL_FILE := $(STL_ROTATION90_FILE)
+STL_FILE := $(STL_PROTOTYPE_FILE)
 VIEW_DIR := $(RENDER_DIR)/views
 OPENSCAD_BIN := bin/openscad/openscad
 OPENSCAD_APPIMAGE := bin/openscad/OpenSCAD.AppImage
@@ -24,9 +24,9 @@ check:
 	uv run scadm install --check
 
 render:
-	$(MAKE) render-rotation90
+	$(MAKE) render-prototype
 
-fallback-render: render-rotation90
+fallback-render: render-prototype
 
 render-rotation0:
 	mkdir -p $(RENDER_DIR)
