@@ -25,6 +25,8 @@ Published print profile:
 Print the part sideways in the exported/default STL orientation. Do not use
 slicer auto-orient.
 
+![Required sideways print orientation](docs/images/ruckus_ap_mount_print_orientation.jpg)
+
 The intended orientation has:
 
 - The HomeRacker sleeve standing upright, with the open channel facing upward
