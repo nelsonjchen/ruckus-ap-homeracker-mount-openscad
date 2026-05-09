@@ -58,9 +58,7 @@ make build
 The default build writes generated outputs under `renders/`, including:
 
 - `renders/ruckus_ap_homeracker_mount_prototype.stl`
-- `renders/ruckus_ap_homeracker_sleeve_rotation90.stl`
-- `renders/ruckus_ap_homeracker_sleeve_rotation0.stl`
-- `renders/ruckus_ap_homeracker_sleeve.png`
+- `renders/ruckus_ap_homeracker_mount_prototype.png`
 
 Generated STL, PNG, and 3MF files are intentionally ignored by Git.
 
@@ -88,13 +86,9 @@ dependency installation, flattening, and render validation.
 - `make install`: install OpenSCAD and SCAD dependencies through `uv run scadm install`
 - `make check`: check the scadm-managed OpenSCAD/dependency install
 - `make render`: render the default sideways prototype mount STL
-- `make render-rotation0`: render the sleeve in the original rail orientation
-- `make render-rotation90`: render the sleeve in the alternate rail orientation
-- `make render-prototype`: render the current Ruckus-prong prototype mount
-- `make render-all`: render both orientation STLs
-- `make png`: create a local preview PNG for `sleeve_rotation = 90` in `renders/`
-- `make png-views`: render reference, prototype, and overlay inspection PNGs
-- `make build`: run the full bootstrap flow and render sleeve/prototype STLs plus inspection PNGs
+- `make png`: create a local preview PNG for the sideways prototype mount
+- `make png-views`: render optional reference, prototype, and overlay inspection PNGs
+- `make build`: run the full bootstrap flow and render the prototype STL and PNG
 - `make clean`: remove generated render/export files
 
 ## Source Layout
