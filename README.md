@@ -10,10 +10,6 @@ prototype. It uses a segmented sleeve around a 15 mm HomeRacker support/bar,
 standard 4 mm lock-pin holes, and a sideways Ruckus prong strip with printable
 gussets under the prong-to-mount connection.
 
-This repository was bootstrapped from an earlier Cisco AP HomeRacker mount. The
-historical Cisco AIR-AP-BRACKET-1 attribution is retained in `NOTICE` and
-`third_party/thingiverse-5491712/`.
-
 ## Status
 
 This is a working Ruckus AP HomeRacker mount prototype.
@@ -88,7 +84,7 @@ dependency installation, flattening, and render validation.
 - `make render`: render the default sideways prototype mount STL
 - `make png`: create a local preview PNG for the sideways prototype mount
 - `make png-views`: render optional reference, prototype, and overlay inspection PNGs
-- `make build`: run the full bootstrap flow and render the prototype STL and PNG
+- `make build`: run setup and render the prototype STL and PNG
 - `make clean`: remove generated render/export files
 
 ## Source Layout
@@ -162,8 +158,4 @@ pointing sideways. Do not auto-orient the model in the slicer.
 This project is released under the Creative Commons Attribution-ShareAlike 4.0
 International license. See `LICENSE`.
 
-This repository was bootstrapped from an earlier Cisco AP HomeRacker mount.
-That original project was inspired by and used dimensions from
-[`Cisco AIR-AP-BRACKET-1` by `nicba1010`](https://www.thingiverse.com/thing:5491712).
-The upstream BSD attribution is retained in `NOTICE` and
-`third_party/thingiverse-5491712/`.
+See `NOTICE` for retained third-party attribution context.
